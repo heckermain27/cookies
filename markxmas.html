@@ -26,8 +26,8 @@
   </head>
   <body>
     <div id="main">
-      <div>user: <span id="user"></span></div>
-      <div>mark: <span id="mark"></span></div>
+      <div>User: <span id="user"></span></div>
+      <div>Mark: <span id="mark"></span></div>
       <div><input id="input" type="text" placeholder="say anything..." autocomplete="off"/></div>
     </div>
     <script type="text/javascript">
@@ -82,7 +82,7 @@
             var product = alternative[Math.floor(Math.random()*alternative.length)];
           }
         }
-        document.getElementById("chatbot").innerHTML = product;
+        document.getElementById("mark").innerHTML = product;
         speak(product);
         document.getElementById("input").value = ""; // Clear Input Value
       }
