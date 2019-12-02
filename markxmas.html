@@ -1,5 +1,18 @@
 <html>
   <title>Merry Christmas!</title>
+  <head>
+    know = {"hello" : "wassup", "you like cookies" : "omg yes!", "ok" : "ok", "want a cookie?" : "yes pretty please"};
+      function talk() {
+      var user = document.getElementById("userBox").value;
+      document.getElementById("userBox").value = "";
+      document.getElementById("chatLog").innerHTML += user + "<br>";
+      if (user in know) {
+        document.getElementById("chatLog").innerHTML += know[user] + "<br>";
+      } else {
+        document.getElementById("chatLog").innerHTML += "I only understand cookies, nothing else...<br>";
+        }
+      }
+  </head>
   <body>
     <h2>~ XOXO - Merry Christmas Y'all! - XOXO ~</h2>
     <hr>
@@ -14,6 +27,8 @@
       window.alert("Mark Loves You Now! <3");
     }
     </script>
+    <p id="chatLog">- - Chat with Mark - -<br></p>
+    <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
     <hr>
     (c) 1994. All rights reserved.
   </body>
